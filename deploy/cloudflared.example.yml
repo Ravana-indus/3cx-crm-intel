@@ -1,0 +1,9 @@
+# Cloudflare Tunnel for the bridge.
+# The bridge itself binds to 127.0.0.1 only; cloudflared is the sole path in.
+tunnel: 3cx-bridge
+credentials-file: /etc/cloudflared/3cx-bridge.json
+
+ingress:
+  - hostname: bridge.example.com
+    service: http://127.0.0.1:8080
+  - service: http_status:404

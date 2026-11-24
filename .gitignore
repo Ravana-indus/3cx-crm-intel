@@ -1,0 +1,31 @@
+# Local data and credentials
+.env
+.env.*
+!.env.example
+*.har
+*.db
+*.sqlite3
+*.sqlite3-*
+*.wav
+*.opus
+*.part
+data/
+bridge/data/
+recordings/
+coverage/
+*.profraw
+
+# Runtime/build output
+node_modules/
+bridge/node_modules/
+bridge/dist/
+dist/
+__pycache__/
+*.py[cod]
+.venv/
+*.log
+*.tsbuildinfo
+
+# Local agent/tool state
+.commandcode/
+.DS_Store

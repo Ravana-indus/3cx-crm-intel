@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3CX Bridge</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="/ui/app.css?v=2026-11-24-layerab" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot" id="brand-dot"></span>
+      <span>3CX Bridge</span>
+      <span class="tag">no-API mode</span>
+      <span class="tag">Layer A/B</span>
+    </div>
+    <div class="auth">
+      <input id="token" type="password" placeholder="PORTAL_TOKEN" autocomplete="off" spellcheck="false" />
+      <button id="save-token" class="primary" type="button">Connect</button>
+      <span id="conn-state" class="status">token required</span>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button data-tab="overview" class="active" type="button">Overview</button>
+    <button data-tab="calls" type="button">Calls</button>
+    <button data-tab="transcripts" type="button">Transcripts</button>
+    <button data-tab="decisions" type="button">Decisions</button>
+    <button data-tab="missed" type="button">Missed</button>
+    <button data-tab="team" type="button">Team</button>
+    <button data-tab="ai" type="button">AI</button>
+    <button data-tab="kb" type="button">Knowledge</button>
+  </nav>
+
+  <main id="view"></main>
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="/ui/app.js?v=2026-11-24-layerab"></script>
+</body>
+</html>

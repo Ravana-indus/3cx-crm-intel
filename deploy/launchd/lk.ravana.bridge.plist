@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>lk.ravana.bridge</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/opt/3cx-bridge/bridge/node_modules/.bin/tsx</string>
+    <string>/opt/3cx-bridge/bridge/src/index.ts</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/opt/3cx-bridge/bridge</string>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>NODE_ENV</key>
+    <string>production</string>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/opt/3cx-bridge/data/logs/bridge.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/opt/3cx-bridge/data/logs/bridge.err.log</string>
+
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>ThrottleInterval</key>
+  <integer>10</integer>
+</dict>
+</plist>

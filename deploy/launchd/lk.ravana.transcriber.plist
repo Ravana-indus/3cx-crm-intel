@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>lk.ravana.transcriber</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/opt/3cx-bridge/transcriber/venv/bin/python</string>
+    <string>-m</string>
+    <string>transcriber.main</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/opt/3cx-bridge</string>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>BRIDGE_URL</key>
+    <string>http://127.0.0.1:8080</string>
+    <key>TRANSCRIBER_ENGINE</key>
+    <string>fluidvoice</string>
+    <key>FLUIDVOICE_URL</key>
+    <string>http://127.0.0.1:8765</string>
+    <key>FLUIDVOICE_ALLOWED_LANGUAGES</key>
+    <string>ta,en,si</string>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/opt/3cx-bridge/data/logs/transcriber.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/opt/3cx-bridge/data/logs/transcriber.err.log</string>
+
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>ThrottleInterval</key>
+  <integer>10</integer>
+</dict>
+</plist>

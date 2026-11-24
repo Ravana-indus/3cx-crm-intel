@@ -1,0 +1,11 @@
+# Phase 2 dependencies.
+# Mock engine and the protocol tests need nothing beyond ffmpeg.
+#   brew install ffmpeg
+#
+# Real Whisper engine:
+faster-whisper>=1.0,<2
+#
+# NVIDIA Parakeet via NeMo (optional, heavy; only if you use ENGINE=nemo/auto):
+# nemo-toolkit[asr]>=1.23
+#
+# ffmpeg/ffprobe are system binaries, not pip packages.

@@ -1,0 +1,18 @@
+[
+  {
+    "tcxRecId": "rec-2001",
+    "callTcxId": "seg-1001",
+    "ext": "102",
+    "startedAt": "2026-11-20T04:30:00.000Z",
+    "durationSec": 303,
+    "channels": 2
+  },
+  {
+    "tcxRecId": "rec-2002",
+    "callTcxId": "seg-1990",
+    "ext": "199",
+    "startedAt": "2026-11-22T03:15:00.000Z",
+    "durationSec": 95,
+    "channels": 2
+  }
+]

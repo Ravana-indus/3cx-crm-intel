@@ -1,0 +1,43 @@
+import type { AiSettingsService } from '../ai/settings.js';
+import type { Config } from '../config.js';
+import type { Db } from '../db/index.js';
+import type { KbSyncer } from '../kb/sync.js';
+import type { AgentsRepo } from '../repo/agents.js';
+import type { AiConversationsRepo } from '../repo/aiConversations.js';
+import type { CallsRepo } from '../repo/calls.js';
+import type { CheckpointsRepo } from '../repo/checkpoints.js';
+import type { DecisionsRepo } from '../repo/decisions.js';
+import type { JobsRepo } from '../repo/jobs.js';
+import type { KbRepo } from '../repo/kb.js';
+import type { MetricsRepo } from '../repo/metrics.js';
+import type { OutboxRepo } from '../repo/outbox.js';
+import type { PresenceRepo } from '../repo/presence.js';
+import type { RecordingsRepo } from '../repo/recordings.js';
+import type { SettingsRepo } from '../repo/settings.js';
+import type { SummariesRepo } from '../repo/summaries.js';
+import type { TranscriptsRepo } from '../repo/transcripts.js';
+import type { ThreeCXConnector } from '../threecx/types.js';
+import type { Logger } from '../util/logger.js';
+
+export interface ApiDeps {
+  config: Config;
+  db: Db;
+  log: Logger;
+  connector: ThreeCXConnector;
+  agents: AgentsRepo;
+  metrics: MetricsRepo;
+  calls: CallsRepo;
+  recordings: RecordingsRepo;
+  checkpoints: CheckpointsRepo;
+  outbox: OutboxRepo;
+  jobs: JobsRepo;
+  presence: PresenceRepo;
+  transcripts: TranscriptsRepo;
+  summaries: SummariesRepo;
+  decisions: DecisionsRepo;
+  kb: KbRepo;
+  kbSyncer: KbSyncer;
+  aiConversations: AiConversationsRepo;
+  aiSettings: AiSettingsService;
+  settings: SettingsRepo;
+}

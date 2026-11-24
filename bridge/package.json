@@ -1,0 +1,41 @@
+{
+  "name": "3cx-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.json && mkdir -p dist/src/db/migrations dist/src/threecx/fixtures dist/src/ui && cp src/db/migrations/*.sql dist/src/db/migrations/ && cp src/threecx/fixtures/* dist/src/threecx/fixtures/ && cp src/ui/* dist/src/ui/",
+    "start": "node dist/src/index.js",
+    "migrate": "tsx src/db/migrate-cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "recon": "tsx scripts/recon.ts",
+    "probe": "tsx scripts/probe.ts",
+    "restore": "tsx scripts/restore.ts",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fastify/swagger": "^9.4.1",
+    "better-sqlite3": "^11.7.0",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.1",
+    "libphonenumber-js": "^1.11.17",
+    "pino": "^9.6.0",
+    "playwright": "^1.49.1",
+    "ws": "^8.18.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.10.5",
+    "@types/ws": "^8.5.13",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  }
+}
